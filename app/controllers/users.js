@@ -108,13 +108,26 @@ const changepw = (req, res, next) => {
   ).catch(makeErrorHandler(res, next))
 }
 
+const changeTeam = (req, res, next) => {
+  User.findOne({
+    _id: req.params.id,
+    token: req.user.token
+  }).then(user => {
+    user.favTeam = req.body.favTeam
+    return user.save()
+  }).then((/* user */) =>
+    res.sendStatus(204)
+  ).catch(makeErrorHandler(res, next))
+}
+
 module.exports = controller({
   index,
   show,
   signup,
   signin,
   signout,
-  changepw
+  changepw,
+  changeTeam
 }, { before: [
   { method: authenticate, except: ['signup', 'signin'] }
 ] })
