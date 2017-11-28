@@ -3,10 +3,10 @@
 const mongoose = require('mongoose')
 
 const gameSchema = new mongoose.Schema({
-  date: {
-    type: Date,
-    required: true
-  },
+  // date: {
+  //   type: Date,
+  //   required: true
+  // },
   home: {
     type: String,
     required: true
@@ -49,9 +49,9 @@ const gameSchema = new mongoose.Schema({
   }
 })
 
-gameSchema.virtual('length').get(function length () {
-  return this.text.length
-})
+// gameSchema.virtual('length').get(function length () {
+//   return this.text.length
+// })
 
 const Game = mongoose.model('Game', gameSchema)
 
