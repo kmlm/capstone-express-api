@@ -12,26 +12,26 @@ const gameSchema = new mongoose.Schema({
     required: true
   },
   away: {
-    String,
+    type: String,
     required: true
   },
-  events:[
-      {
-        minute: Number,
-        required: true
-    },
-    {
-      type: String,
-      required: true
-    },
-    {
-      player: String,
-      required: true
-    },
-    {
-      comment: String
-    }
-  ],
+  events: [{
+      minute: {
+          type: Number,
+          required: true
+          },
+      eventType: {
+          type: String,
+          required: true
+        },
+      player: {
+          type: String,
+          required: true
+        },
+      comment: {
+          type: String
+        }
+    }],
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
