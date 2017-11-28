@@ -14,6 +14,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  favTeam: {
+    type: String,
+    default: null
+  },
   passwordDigest: String
 }, {
   timestamps: true,
