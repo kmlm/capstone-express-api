@@ -20,6 +20,10 @@ const gameSchema = new mongoose.Schema({
           type: Number,
           required: true
           },
+      team: {
+        type: String,
+        required: true
+      },
       eventType: {
           type: String,
           required: true
