@@ -3,14 +3,15 @@
 
 API="http://localhost:4741"
 URL_PATH="/games"
-TOKEN=cE+QosXX1Gx6whE+ufDWDVKSpwMCwEcte4Q/lOz6W5o=--ENwg8/YWSboGxd6ojOsr6xeaftD5hVFHlxhd/izmtfg=
+TOKEN=KVIgjHNtKQFW+8DUfbfNiA3I148L3Gl83dQ6IDsUth8=--K/KudjYlVsBhGSVmVEVEHvyQhqN5IyYHdg+ZTELg2S4=
 DATE='2017-01-01'
 HOME='Tottenham'
 AWAY='Burnley'
 EVENTMINUTE=90
 EVENTTYPE='Penalty'
 PLAYER='Alli'
-COMMENT='testing comment'
+COMMENT='testing comment asdi;fjasdf asdf;oijadsf asdf;oi jasdf ;oijdsf ;oaidjsf ;oisdj f;oijasd f;oijsd f;oijasd f;oijasd f;oijasd ;oijsdf ;oijsd f;oijsad f;oijasd f;oijsd f;oijasd f;oijasdf;o ijsd ;foij'
+TEAM='Tottenham'
 
 curl "${API}${URL_PATH}" \
   --include \
@@ -25,6 +26,7 @@ curl "${API}${URL_PATH}" \
       "away": "'"${AWAY}"'",
       "events" :[{
           "minute": "'"${EVENTMINUTE}"'",
+          "team": "'"${TEAM}"'",
           "eventType": "'"${EVENTTYPE}"'",
           "player": "'"${PLAYER}"'",
           "comment": "'"${COMMENT}"'"

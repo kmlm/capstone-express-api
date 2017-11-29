@@ -3,10 +3,10 @@
 const mongoose = require('mongoose')
 
 const gameSchema = new mongoose.Schema({
-  // date: {
-  //   type: Date,
-  //   required: true
-  // },
+  date: {
+    type: Date,
+    required: true
+  },
   home: {
     type: String,
     required: true
