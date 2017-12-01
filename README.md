@@ -13,7 +13,23 @@ This is an Express API using MongoDB and mongoose.
 
 The largest unsolved problem was in the API for this project. In order to add events to a user's game I was pushing new games to an array and sending a PATCH request with the new array. This did not pose any issues. The issue came in subtracting events. I used a filter function to create a new array that did not include the event that was going to be subtracted. I then sent a PATCH request with that array. This worked until I got to the last event for a game. When the filter produced an empty array as no more games were remaining, I consistently received a 500 internal server error and was not able to complete the PATCH passing an empty array. Hopefully, with more time I will be able to fix that problem to allow for delete event functionality.
 
+## Routes
 
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| PATCH  | `/change-password/:id` | `users#changepw`  |
+| DELETE | `/sign-out/:id`        | `users#signout`   |
+| PATCH  | `/change-team/:id`     | `users#changeTeam`|
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| GET    | `/games`               | `games#index`     |
+| GET    | `/games/:id`           | `games#show`      |
+| POST   | `/games`               | `games#create`    |
+| PATCH  | `/games/:id`           | `games#update`    |
+| DELETE | `/games/:id`           | `games#destroy`   |
 
 ## Links
 
