@@ -5,6 +5,13 @@ EPLdashboard is an App that allows you to track key information about the Englis
 
 The app also allows you to track games for your team. For those fans that like to keep track of key match events, the GameTracker function allows you to keep track of key events in the match and add any comments to jog their memory of the game when looking back later.
 
+
+## Problem Solving / Thought Process
+
+The initial work for the API was done in a different repo (https://github.com/kmlm/capstone-api) using Ruby on Rails, but based
+on the evolution of the data structure, it made more sense to switch
+to using Express and MongoDB. Work started at this Repo on the second day of the project.
+
 ## Technologies Used
 
 This is an Express API using MongoDB and mongoose.
